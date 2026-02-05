@@ -22,28 +22,28 @@ MLflow Tracking: Scientific logging of Latency, Accuracy, and Parameters.
 ## 1. Environment Setup
 
 
-# Create a dedicated forensic environment
+### Create a dedicated forensic environment
 conda create -n forensics python=3.10 -y
 conda activate forensics
 
-# Install production requirements
+### Install production requirements
 pip install -r requirements.txt
 
 
-**2. Pipeline Reproduction (DVC)**
+## 2. Pipeline Reproduction (DVC)
 
-# Initialize and run the full forensic DAG
+### Initialize and run the full forensic DAG
 dvc init
 dvc repro
 
 ## 3. Real-Time Inference App
 
-# Launch the Flask-based Forensic UI
+### Launch the Flask-based Forensic UI
 python app.py
 Access local dashboard at http://localhost:8080
 
 
-## 📊 Experiment Tracking (MLflow & Dagshub)
+# 📊 Experiment Tracking (MLflow & Dagshub)
 
 All experiments are tracked via a remote MLflow server hosted on Dagshub to ensure Data Lineage and Scientific Transparency.
 Tracking Credentials:
@@ -53,7 +53,7 @@ export MLFLOW_TRACKING_USERNAME=pradeepanpp
 export MLFLOW_TRACKING_PASSWORD=[YOUR_TOKEN]
 
 
-## ☁️ Cloud Deployment (CI/CD)
+# ☁️ Cloud Deployment (CI/CD)
 
 The system is architected for Sovereign Cloud Deployment (AWS/Azure) using Docker and GitHub Actions.
 Build: Automated Docker image construction.
