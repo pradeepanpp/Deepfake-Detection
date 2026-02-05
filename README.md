@@ -24,6 +24,7 @@ MLflow Tracking: Scientific logging of Latency, Accuracy, and Parameters.
 
 ### Create a dedicated forensic environment
 conda create -n forensics python=3.10 -y
+
 conda activate forensics
 
 ### Install production requirements
