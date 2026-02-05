@@ -1,0 +1,17 @@
+# Python build artifacts
+*.egg-info/
+__pycache__/
+build/
+dist/
+
+# MLOps Artifacts
+artifacts/
+logs/
+mlruns/
+*.h5
+*.zip
+
+# IDEs
+.vscode/
+.idea/
+.DS_Store
