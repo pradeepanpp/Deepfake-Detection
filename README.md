@@ -58,11 +58,21 @@ export MLFLOW_TRACKING_PASSWORD=[YOUR_TOKEN]
 # ☁️ Cloud Deployment (CI/CD)
 
 The system is architected for Sovereign Cloud Deployment (AWS/Azure) using Docker and GitHub Actions.
+
 Build: Automated Docker image construction.
+
 Push: Secure image transfer to AWS ECR.
+
 Deploy: Continuous deployment to AWS EC2 via Self-Hosted Runners.
+
+
+
 Required Secrets:
+
 AWS_ACCESS_KEY_ID
+
 AWS_SECRET_ACCESS_KEY
+
 AWS_REGION = us-east-1
+
 ECR_REPOSITORY_NAME = deepfake-forensics
