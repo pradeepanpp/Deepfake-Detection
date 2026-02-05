@@ -1,6 +1,6 @@
-Real-Time Deepfake Forensics Pipeline
+                         REAL-TIME DEEPFAKE DETECTION
 
-📌 Research Abstract
+📌 PROJECT ABSTRACT
 This project implements a production-grade MLOps pipeline for digital forensics, specifically targeting the detection of GAN-generated facial manipulations. The core innovation lies in the transition from computationally expensive architectures (like VGG16) to a Sovereign AI-optimized MobileNetV2.
 By utilizing Global Average Pooling and a specialized Forensic Sigmoid Head, the model achieves the accuracy with a 95% reduction in parameter overhead, making it suitable for real-time edge deployment.
 
