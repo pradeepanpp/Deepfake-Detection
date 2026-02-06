@@ -35,12 +35,14 @@ pip install -r requirements.txt
 
 ### Initialize and run the full forensic DAG
 dvc init
+
 dvc repro
 
 ## 3. Real-Time Inference App
 
 ### Launch the Flask-based Forensic UI
 python app.py
+
 Access local dashboard at http://localhost:8080
 
 
