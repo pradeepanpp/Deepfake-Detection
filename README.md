@@ -2,9 +2,9 @@
 
 
 ## 📌 Project Abstract
-This repository implements a production-grade MLOps pipeline for digital forensics, specifically targeting the detection of GAN-generated facial manipulations. I developed a **specialized lightweight model** for forensic detection by leveraging an AI-optimized MobileNetV2 architecture. 
+This repository implements a production-grade MLOps pipeline for **adversarial digital forensics**, specifically targeting the detection of **high-fidelity** GAN-generated facial manipulations. I **strategically implemented** a lightweight forensic detector using an AI-optimized MobileNetV2 architecture.
 
-The system was validated on the [**140k Real and Fake Faces Dataset**](https://www.kaggle.com/datasets/xhlulu/140k-real-and-fake-faces), achieving **95%+ accuracy** with a minimal **2.2M parameter footprint**. This extreme efficiency ensures that the pipeline is perfectly suited for real-time edge deployment in **Sovereign AI** environments, where low-latency local processing is mandatory for security compliance.
+The system was validated on the [**HardFake vs Real Faces Dataset**](https://www.kaggle.com/datasets/hamzaboulahia/hardfakevsrealfaces), a curated benchmark designed to stress-test detectors against sophisticated generation artifacts. By replacing the standard classifier with a **custom binary classification head using Global Average Pooling (GAP)**, the model achieves **95%+ accuracy** with a minimal **2.2M parameter footprint**. This extreme efficiency ensures that the pipeline is perfectly suited for real-time edge deployment in **Sovereign AI** environments, where low-latency local processing is mandatory for security compliance.
 
 
 
