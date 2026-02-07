@@ -29,10 +29,10 @@ class PredictionPipeline:
 
     
         if probability > 0.5:
-            prediction = 'Fake'
+            prediction = 'Real'
             confidence = float(probability * 100)
         else:
-            prediction = 'Real'
+            prediction = 'Fake'
             confidence = float((1 - probability) * 100)
 
         print(f"Prediction: {prediction}, Confidence: {confidence:.2f}%")
