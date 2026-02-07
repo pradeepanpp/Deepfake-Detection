@@ -1,20 +1,27 @@
-  #                       Real-Time Deepfake Forensics Pipeline
+  #                Lightweight Modular Framework for Digital Forensic Auditing
 
-## 📌 PROJECT ABSTRACT
-This project implements a production-grade MLOps pipeline for digital forensics, specifically targeting the detection of GAN-generated facial manipulations. The core innovation lies in the transition from computationally expensive architectures to a AI-optimized MobileNetV2.
-By utilizing Global Average Pooling and a specialized Forensic Sigmoid Head, the model achieves the accuracy with a 95% reduction in parameter overhead, making it suitable for real-time edge deployment.
 
+## 📌 Project Abstract
+This repository implements a production-grade MLOps pipeline for digital forensics, specifically targeting the detection of GAN-generated facial manipulations. I developed a **specialized lightweight model** for forensic detection by leveraging an AI-optimized MobileNetV2 architecture. 
+
+The system was validated on the [**140k Real and Fake Faces Dataset**](https://www.kaggle.com/datasets/xhlulu/140k-real-and-fake-faces), achieving **95%+ accuracy** with a minimal **2.2M parameter footprint**. This extreme efficiency ensures that the pipeline is perfectly suited for real-time edge deployment in **Sovereign AI** environments, where low-latency local processing is mandatory for security compliance.
+
+
+
+[![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.12-orange.svg)](https://www.tensorflow.org/)
+[![MLOps](https://img.shields.io/badge/MLOps-DVC%20%7C%20MLflow-red.svg)](https://dagshub.com/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ## ⚙️ Modular MLOps Workflow
-This repository follows a strict decoupled architecture to ensure reproducibility and scalability:
-Config Layer: Update config.yaml for environment-agnostic paths.
-Params Layer: Fine-tune params.yaml.
-Entities: Define data structures for rigorous type-checking.
-Config Manager: Abstract configuration from logic.
-Components: Modular implementation (Ingestion, Base Model, Training, Evaluation).
-Pipeline Orchestration: Sequenced execution of forensic stages.
-DVC Integration: Data versioning and pipeline DAG management.
-MLflow Tracking: Scientific logging of Latency, Accuracy, and Parameters.
+This system utilizes a strictly decoupled architecture to ensure scientific reproducibility:
+- **Config Layer**: Environment-agnostic path management via `config.yaml`.
+- **Entities**: Strongly-typed data structures for runtime integrity.
+- **Config Manager**: Abstracted orchestration logic.
+- **Components**: Modular workers (Ingestion, Model Factory, Trainer, Evaluator).
+- **DVC Integration**: Full data lineage and Directed Acyclic Graph (DAG) management.
+- **MLflow Tracking**: Integrated performance telemetry via Dagshub.
+
 
 
 # 🚀 Execution Guide
@@ -60,22 +67,8 @@ export MLFLOW_TRACKING_PASSWORD=[YOUR_TOKEN]
 
 # ☁️ Cloud Deployment (CI/CD)
 
-The system is architected for Sovereign Cloud Deployment (AWS/Azure) using Docker and GitHub Actions.
+Designed for Sovereign Cloud Deployment via Docker and GitHub Actions:
 
-Build: Automated Docker image construction.
+AWS ECR: Secure container storage.
 
-Push: Secure image transfer to AWS ECR.
-
-Deploy: Continuous deployment to AWS EC2 via Self-Hosted Runners.
-
-
-
-Required Secrets:
-
-AWS_ACCESS_KEY_ID
-
-AWS_SECRET_ACCESS_KEY
-
-AWS_REGION = us-east-1
-
-ECR_REPOSITORY_NAME = deepfake-forensics
+AWS EC2: Self-hosted runners for continuous deployment.
