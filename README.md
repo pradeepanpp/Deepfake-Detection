@@ -1,4 +1,4 @@
-  #                Lightweight Modular Framework for Digital Forensic Auditing
+  #                Lightweight Modular Framework for Deepfake face Detection
 
 
 ## 📌 Project Abstract
