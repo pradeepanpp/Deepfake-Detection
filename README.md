@@ -52,6 +52,10 @@ python app.py
 
 Access local dashboard at http://localhost:8080
 
+<img width="1920" height="967" alt="real" src="https://github.com/user-attachments/assets/9ead5248-4447-410e-89ec-5900ee7cfd08" />
+
+<img width="1920" height="975" alt="Screenshot 2026-02-07 163414" src="https://github.com/user-attachments/assets/b8b216bb-4f5e-4b21-a777-941df3dd6c90" />
+
 
 # 📊 Experiment Tracking (MLflow & Dagshub)
 
