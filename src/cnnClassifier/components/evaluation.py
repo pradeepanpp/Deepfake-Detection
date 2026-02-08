@@ -75,7 +75,7 @@ class Evaluation:
    
         mlflow.set_tracking_uri(self.config.mlflow_uri)
         
-
+        mlflow.set_registry_uri(self.config.mlflow_uri)
         mlflow.set_experiment("MobileNetV2_Forensics")
 
         print(f"Logging metrics to: {mlflow.get_tracking_uri()}")
@@ -95,5 +95,9 @@ class Evaluation:
                 "param_count": float(self.total_params)
             })
 
+    
+            mlflow.keras.log_model(
+            self.model,
+            artifact_path="model",
+            registered_model_name="MobileNetV2ForensicModel")
         
-            mlflow.keras.log_model(self.model, "model")
