@@ -72,27 +72,28 @@ class Evaluation:
 
     
     def log_into_mlflow(self):
-        mlflow.set_registry_uri(self.config.mlflow_uri)
-        tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
+   
+        mlflow.set_tracking_uri(self.config.mlflow_uri)
+        
+
+        mlflow.set_experiment("MobileNetV2_Forensics")
+
+        print(f"Logging metrics to: {mlflow.get_tracking_uri()}")
         
         with mlflow.start_run():
-         
-            mlflow.log_params(self.config.all_params)
+
+            params = self.config.all_params
+            if not isinstance(params, dict):
+                params = dict(params)
+            mlflow.log_params(params)
             
-         
+      
             mlflow.log_metrics({
-                "loss": self.score[0], 
-                "accuracy": self.score[1],
-                "latency_ms": self.latency,
-                "param_count": self.total_params
+                "loss": float(self.score[0]), 
+                "accuracy": float(self.score[1]),
+                "latency_ms": float(self.latency),
+                "param_count": float(self.total_params)
             })
 
         
-            if tracking_url_type_store != "file":
-                mlflow.keras.log_model(
-                    self.model, 
-                    "model", 
-                    registered_model_name="MobileNetV2ForensicModel" 
-                )
-            else:
-                mlflow.keras.log_model(self.model, "model")
+            mlflow.keras.log_model(self.model, "model")
