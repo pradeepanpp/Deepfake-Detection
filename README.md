@@ -62,9 +62,9 @@ Access local dashboard at http://localhost:8080
 All experiments are tracked via a remote MLflow server hosted on Dagshub to ensure Data Lineage and Scientific Transparency.
 Tracking Credentials:
 
-export MLFLOW_TRACKING_URI=https://dagshub.com/pradeepanpp/Deepfake-Forensics-Sovereign-AI.mlflow
+export MLFLOW_TRACKING_URI=https://dagshub.com/pradeep0076/Deepfake-Detection.mlflow
 
-export MLFLOW_TRACKING_USERNAME=pradeepanpp
+export MLFLOW_TRACKING_USERNAME=pradeep0076
 
 export MLFLOW_TRACKING_PASSWORD=[YOUR_TOKEN]
 
