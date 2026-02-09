@@ -13,8 +13,25 @@ The system was validated on the [**HardFake vs Real Faces Dataset**](https://www
 
 ![Deepfake Detection UI]
 
-<img width="1920" height="967" alt="real" src="https://github.com/user-attachments/assets/9ead5248-4447-410e-89ec-5900ee7cfd08" />
-*Figure 1: Real-time inference showing 99.58% confidence on high-fidelity facial data.*
+| **Case A: Verified Real** | **Case B: Detected Deepfake** |
+|:---:|:---:|
+| ![Real Prediction]<img width="1920" height="967" alt="real" src="https://github.com/user-attachments/assets/9ead5248-4447-410e-89ec-5900ee7cfd08" /> | ![Fake Prediction]<img width="1649" height="788" alt="fake" src="https://github.com/user-attachments/assets/2bf12316-71a9-4ca3-8945-a8da6a73cab2" />
+ |
+| *Status: **AUTHENTIC** (99.58% Confidence)*                                                                   | *Status: **MANIPULATED** (99.98% Confidence)* |
+
+
+## 📊 Performance Benchmarks
+
+*Validated on the HardFake vs Real Faces Dataset.*
+
+The model was engineered to meet strict **Low-Compute** requirements.
+
+| Key Metric | Performance |
+| :--- | :--- |
+| **Test Accuracy** | **97.67%**  |
+| **loss** | **0.073** |
+| **Parameter Count** | **2.26 Million** |
+
 
 ## ⚙️ Modular MLOps Workflow
 This system utilizes a strictly decoupled architecture to ensure scientific reproducibility:
