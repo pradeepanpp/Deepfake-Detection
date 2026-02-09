@@ -24,7 +24,7 @@ The system was validated on the [**HardFake vs Real Faces Dataset**](https://www
 
 *Validated on the HardFake vs Real Faces Dataset.*
 
-The model was engineered to meet strict **Low-Compute** requirements.
+
 
 | Key Metric | Performance |
 | :--- | :--- |
