@@ -11,7 +11,7 @@ The system was validated on the [**HardFake vs Real Faces Dataset**](https://www
 
 ### 🖥️ Forensic Dashboard Preview
 
-![Deepfake Detection UI]
+
 
 | **Case A: Verified Real** | **Case B: Detected Deepfake** |
 |:---:|:---:|
