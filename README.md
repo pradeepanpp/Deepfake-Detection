@@ -38,14 +38,8 @@ conda activate forensics
 pip install -r requirements.txt
 
 
-## 2. Pipeline Reproduction (DVC)
 
-### Initialize and run the full forensic DAG
-dvc init
-
-dvc repro
-
-## 3. Real-Time Inference App
+## 2. Real-Time Inference App
 
 ### Launch the Flask-based Forensic UI
 python app.py
@@ -57,22 +51,4 @@ Access local dashboard at http://localhost:8080
 <img width="1920" height="975" alt="Screenshot 2026-02-07 163414" src="https://github.com/user-attachments/assets/b8b216bb-4f5e-4b21-a777-941df3dd6c90" />
 
 
-# 📊 Experiment Tracking (MLflow & Dagshub)
 
-All experiments are tracked via a remote MLflow server hosted on Dagshub to ensure Data Lineage and Scientific Transparency.
-Tracking Credentials:
-
-export MLFLOW_TRACKING_URI=https://dagshub.com/pradeep0076/Deepfake-Detection.mlflow
-
-export MLFLOW_TRACKING_USERNAME=pradeep0076
-
-export MLFLOW_TRACKING_PASSWORD=[YOUR_TOKEN]
-
-
-# ☁️ Cloud Deployment (CI/CD)
-
-Designed for Sovereign Cloud Deployment via Docker and GitHub Actions:
-
-AWS ECR: Secure container storage.
-
-AWS EC2: Self-hosted runners for continuous deployment.
