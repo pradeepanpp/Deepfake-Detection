@@ -15,7 +15,7 @@ The system was validated on the [**HardFake vs Real Faces Dataset**](https://www
 
 | **Case A: Verified Real** | **Case B: Detected Deepfake** |
 |:---:|:---:|
-| ![Real Prediction]<img width="1920" height="967" alt="real" src="https://github.com/user-attachments/assets/9ead5248-4447-410e-89ec-5900ee7cfd08" /> | ![Fake Prediction]<img width="1649" height="788" alt="fake" src="https://github.com/user-attachments/assets/2bf12316-71a9-4ca3-8945-a8da6a73cab2" />
+| <img width="1920" height="967" alt="real" src="https://github.com/user-attachments/assets/9ead5248-4447-410e-89ec-5900ee7cfd08" /> | <img width="1649" height="788" alt="fake" src="https://github.com/user-attachments/assets/2bf12316-71a9-4ca3-8945-a8da6a73cab2" />
  |
 | *Status: **AUTHENTIC** (99.58% Confidence)*                                                                   | *Status: **MANIPULATED** (99.98% Confidence)* |
 
