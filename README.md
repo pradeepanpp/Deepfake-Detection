@@ -5,9 +5,9 @@
 [![MLOps](https://img.shields.io/badge/MLOps-DVC%20%7C%20MLflow-red.svg)](https://dagshub.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 ## 📌 Project Abstract
-This repository implements a production-grade MLOps pipeline for **adversarial digital forensics**, specifically targeting the detection of **high-fidelity** GAN-generated facial manipulations. I **strategically implemented** a lightweight forensic detector using an AI-optimized MobileNetV2 architecture.
+This repository implements an **end-to-end, reproducible MLOps pipeline** for **binary deepfake face detection (real vs manipulated)** using a lightweight **MobileNetV2** backbone.
 
-The system was validated on the [**HardFake vs Real Faces Dataset**](https://www.kaggle.com/datasets/hamzaboulahia/hardfakevsrealfaces), a curated benchmark designed to stress-test detectors against sophisticated generation artifacts. By replacing the standard classifier with a **custom binary classification head using Global Average Pooling (GAP)**, the model achieves **95%+ accuracy** with a minimal **2.2M parameter footprint**. This extreme efficiency ensures that the pipeline is perfectly suited for real-time edge deployment in **Sovereign AI** environments, where low-latency local processing is mandatory for security compliance.
+The system is evaluated on the [**HardFake vs Real Faces Dataset**](https://www.kaggle.com/datasets/hamzaboulahia/hardfakevsrealfaces). By replacing the standard classifier with a **custom binary classification head using Global Average Pooling (GAP)**, the model achieves **97.67% test accuracy** with a compact **2.26M parameter** footprint. The goal is to keep the detector efficient and easy to run in resource constrained environments.
 
 ### 🖥️ Forensic Dashboard Preview
 
